@@ -1,0 +1,16 @@
+{
+  "name": "turku-frontend",
+  "description": "Webcomponent turku-frontend following open-wc recommendations",
+  "license": "MIT",
+  "author": "turku-frontend",
+  "version": "0.0.0",
+  "scripts": {
+    "start": "web-dev-server"
+  },
+  "dependencies": {
+    "lit": "^2.0.0-rc.2"
+  },
+  "devDependencies": {
+    "@web/dev-server": "^0.1.21"
+  }
+}
