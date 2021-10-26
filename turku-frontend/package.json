@@ -8,6 +8,7 @@
     "start": "web-dev-server"
   },
   "dependencies": {
+    "@lit-labs/motion": "^1.0.1",
     "lit": "^2.0.0-rc.2"
   },
   "devDependencies": {

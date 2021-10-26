@@ -1,4 +1,6 @@
 import { css, html, LitElement } from "lit";
+import { repeat } from "lit/directives/repeat.js";
+import { animate } from "@lit-labs/motion";
 
 export class ScoreBoard extends LitElement {
     static get properties() {
@@ -35,13 +37,16 @@ export class ScoreBoard extends LitElement {
         return html`
       <button @click=${this.addItem}>Add entry</button>
       <ul>
-        ${this.scores.map(
+        ${repeat(
+            this.scores,
+            (entry) => entry.score,
             (entry, i) => html`
             <score-board-item
               @click=${() => this.removeItem(i)}
               name=${entry.name}
               score=${entry.score}
               ?first-place=${i === 0}
+              ${animate()}
             ></score-board-item>
           `
         )}
